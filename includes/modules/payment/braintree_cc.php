@@ -721,7 +721,7 @@ EOD;
       $js = <<<EOD
 <script src="https://js.braintreegateway.com/v1/braintree.js"></script>
 <script>
-$(function() {
+document.addEventListener('DOMContentLoaded', function(){
   $('form[name="checkout_confirmation"]').attr('id', 'braintree-payment-form');
 
   var braintree = Braintree.create('{$braintree_client_key}');
